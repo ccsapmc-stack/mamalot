@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>For My Beloved Wife ❤️ Joy</title>
+    <style>
+        /* ---------- RESET & BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100dvh;
+            background: radial-gradient(circle at 10% 30%, #1a0b1a, #0a0a0a);
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            padding: 16px;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        /* ---------- FLOATING HEART / SPARKLE BACKGROUND ---------- */
+        .background-love {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .floating-heart {
+            position: absolute;
+            color: rgba(255, 80, 120, 0.25);
+            font-size: 28px;
+            animation: floatUp 14s infinite linear;
+            bottom: -60px;
+            user-select: none;
+            filter: drop-shadow(0 0 6px rgba(255, 20, 80, 0.5));
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                opacity: 0.2;
+            }
+            20% {
+                opacity: 0.8;
+            }
+            80% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-120vh) scale(1.4) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* ---------- MAIN CARD (surprise box) ---------- */
+        .love-card {
+            position: relative;
+            z-index: 20;
+            max-width: 800px;
+            width: 100%;
+            background: rgba(20, 10, 25, 0.75);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 2px solid rgba(255, 120, 160, 0.5);
+            border-radius: 60px 60px 60px 60px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 200, 220, 0.1) inset, 0 0 40px rgba(255, 80, 130, 0.5);
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: cardGlow 4s infinite alternate;
+        }
+
+        @keyframes cardGlow {
+            0% {
+                box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 200, 220, 0.1) inset, 0 0 30px rgba(255, 60, 120, 0.4);
+                border-color: rgba(255, 130, 170, 0.5);
+            }
+            100% {
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 0 4px rgba(255, 220, 240, 0.2) inset, 0 0 70px rgba(255, 40, 100, 0.9);
+                border-color: rgba(255, 180, 210, 0.9);
+            }
+        }
+
+        /* ---------- HEART BEAT / BIG LOVE SYMBOL ---------- */
+        .heart-beat {
+            font-size: 5.5rem;
+            line-height: 1;
+            display: inline-block;
+            filter: drop-shadow(0 0 20px #ff3366);
+            animation: heartPulse 1.6s infinite ease-in-out;
+            margin-bottom: 0.5rem;
+            transform-origin: center;
+        }
+
+        @keyframes heartPulse {
+            0% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 15px #ff3366);
+            }
+            50% {
+                transform: scale(1.2);
+                filter: drop-shadow(0 0 40px #ff6b9d);
+            }
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 15px #ff3366);
+            }
+        }
+
+        /* ---------- TITLE & MESSAGE ---------- */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #ffe6f0, #ffb3c6, #ff7b9c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(255, 80, 120, 0.7);
+            margin: 0.5rem 0 0.8rem;
+            line-height: 1.2;
+            word-break: break-word;
+        }
+
+        .wife-name {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: #ffb3c6;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            text-shadow: 0 0 15px #ff4d6d;
+        }
+
+        .nickname {
+            font-size: 1.3rem;
+            color: #ff8aa8;
+            letter-spacing: 2px;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 8px #ff3366;
+        }
+
+        .love-message {
+            font-size: 1.3rem;
+            line-height: 1.9;
+            margin: 1.2rem 0 1.2rem;
+            padding: 0 0.5rem;
+            color: #ffdfe8;
+            font-weight: 300;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, #ffd9e6, #ffeef4, #ffd9e6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 400;
+        }
+
+        /* special message for daughter */
+        .babycoy-message {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin: 1.5rem 0 1rem;
+            padding: 1.2rem 1rem;
+            background: rgba(255, 80, 120, 0.08);
+            border-radius: 50px;
+            border: 1px dashed rgba(255, 150, 180, 0.7);
+            color: #ffd9e6;
+            font-weight: 300;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 0 25px rgba(255, 60, 120, 0.2);
+        }
+
+        .babycoy-message span {
+            font-weight: 600;
+            color: #ffb3c6;
+            text-shadow: 0 0 15px #ff4d6d;
+        }
+
+        /* ---------- FLOATING HEARTS INSIDE CARD (decor) ---------- */
+        .tiny-hearts {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin: 1.2rem 0 0.8rem;
+            font-size: 1.8rem;
+        }
+
+        .tiny-hearts span {
+            animation: twinkle 2s infinite alternate;
+            display: inline-block;
+            filter: drop-shadow(0 0 8px #ff4d6d);
+        }
+
+        .tiny-hearts span:nth-child(2) {
+            animation-delay: 0.4s;
+            font-size: 2.2rem;
+        }
+
+        .tiny-hearts span:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes twinkle {
+            0% {
+                opacity: 0.5;
+                transform: scale(0.9) translateY(0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.2) translateY(-6px);
+            }
+        }
+
+        /* ---------- SIGNATURE ---------- */
+        .signature {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            color: #ffb3c6;
+            letter-spacing: 1px;
+            border-top: 1px dashed rgba(255, 150, 180, 0.5);
+            padding-top: 1.5rem;
+            font-style: italic;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .signature .name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ff8aa8;
+            text-shadow: 0 0 12px #ff3366;
+            letter-spacing: 2px;
+        }
+
+        /* ---------- INTERACTIVE BUTTON (extra love) ---------- */
+        .love-btn {
+            background: transparent;
+            border: 2px solid #ff7b9c;
+            color: #ffccda;
+            font-size: 1.1rem;
+            padding: 12px 30px;
+            border-radius: 50px;
+            margin: 0.8rem 0 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 15px rgba(255, 60, 120, 0.4);
+            letter-spacing: 2px;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .love-btn:hover {
+            background: #ff4d6d;
+            color: #fff0f5;
+            box-shadow: 0 0 40px #ff3366;
+            border-color: #ffb3c6;
+            transform: scale(1.04);
+        }
+
+        .love-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* ============================================================ */
+        /* ============ RESPONSIVE (DESIGN UNCHANGED) ================= */
+        /* ============================================================ */
+
+        @media (max-width: 768px) {
+            body {
+                padding: 14px;
+                align-items: flex-start;
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+            .love-card {
+                padding: 2.5rem 1.8rem;
+                border-radius: 50px;
+            }
+            h1 {
+                font-size: 2.3rem;
+            }
+            .heart-beat {
+                font-size: 4.5rem;
+            }
+            .love-message {
+                font-size: 1.15rem;
+            }
+            .babycoy-message {
+                font-size: 1.1rem;
+                padding: 1.1rem 0.9rem;
+            }
+            .signature .name {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                align-items: flex-start;
+            }
+            .love-card {
+                padding: 2rem 1.3rem;
+                border-radius: 40px;
+                border-width: 1.5px;
+            }
+            h1 {
+                font-size: 2rem;
+                letter-spacing: 1.5px;
+            }
+            .heart-beat {
+                font-size: 4rem;
+            }
+            .wife-name {
+                font-size: 1rem;
+                letter-spacing: 4px;
+            }
+            .nickname {
+                font-size: 1rem;
+                margin-bottom: 1.2rem;
+            }
+            .love-message {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                margin: 1rem 0;
+            }
+            .babycoy-message {
+                font-size: 1rem;
+                line-height: 1.7;
+                padding: 1rem 0.8rem;
+                border-radius: 35px;
+                margin: 1.2rem 0 0.8rem;
+            }
+            .tiny-hearts {
+                gap: 16px;
+                font-size: 1.6rem;
+                margin: 1rem 0 0.6rem;
+            }
+            .tiny-hearts span:nth-child(2) {
+                font-size: 2rem;
+            }
+            .signature {
+                margin-top: 1.8rem;
+                padding-top: 1.3rem;
+                font-size: 1.05rem;
+            }
+            .signature .name {
+                font-size: 1.3rem;
+            }
+            .love-btn {
+                font-size: 1rem;
+                padding: 12px 24px;
+                letter-spacing: 1.5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .love-card {
+                padding: 1.8rem 1.1rem;
+                border-radius: 36px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+            }
+            .heart-beat {
+                font-size: 3.6rem;
+            }
+            .wife-name {
+                font-size: 0.95rem;
+                letter-spacing: 3.5px;
+            }
+            .nickname {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+            .love-message {
+                font-size: 1.05rem;
+                line-height: 1.75;
+                margin: 0.9rem 0;
+                padding: 0 0.3rem;
+            }
+            .babycoy-message {
+                font-size: 0.95rem;
+                line-height: 1.65;
+                padding: 0.9rem 0.7rem;
+                border-radius: 30px;
+                margin: 1.1rem 0 0.7rem;
+            }
+            .tiny-hearts {
+                gap: 14px;
+                font-size: 1.5rem;
+                margin: 0.9rem 0 0.5rem;
+            }
+            .tiny-hearts span:nth-child(2) {
+                font-size: 1.9rem;
+            }
+            .signature {
+                margin-top: 1.5rem;
+                padding-top: 1.1rem;
+                font-size: 1rem;
+                gap: 5px;
+            }
+            .signature .name {
+                font-size: 1.25rem;
+            }
+            .love-btn {
+                font-size: 0.95rem;
+                padding: 11px 20px;
+                letter-spacing: 1px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            body {
+                padding: 8px;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+            .love-card {
+                padding: 1.6rem 1rem;
+                border-radius: 32px;
+                border-width: 1.5px;
+            }
+            h1 {
+                font-size: 1.6rem;
+                letter-spacing: 0.8px;
+                margin: 0.3rem 0 0.6rem;
+            }
+            .heart-beat {
+                font-size: 3.2rem;
+                margin-bottom: 0.3rem;
+            }
+            .wife-name {
+                font-size: 0.9rem;
+                letter-spacing: 3px;
+                margin-bottom: 0.3rem;
+            }
+            .nickname {
+                font-size: 0.9rem;
+                margin-bottom: 0.9rem;
+                letter-spacing: 1.5px;
+            }
+            .love-message {
+                font-size: 0.98rem;
+                line-height: 1.7;
+                margin: 0.8rem 0;
+                padding: 0 0.2rem;
+            }
+            .babycoy-message {
+                font-size: 0.92rem;
+                line-height: 1.6;
+                padding: 0.85rem 0.65rem;
+                border-radius: 28px;
+                margin: 1rem 0 0.6rem;
+            }
+            .tiny-hearts {
+                gap: 12px;
+                font-size: 1.4rem;
+                margin: 0.8rem 0 0.4rem;
+            }
+            .tiny-hearts span:nth-child(2) {
+                font-size: 1.8rem;
+            }
+            .signature {
+                margin-top: 1.3rem;
+                padding-top: 1rem;
+                font-size: 0.95rem;
+                gap: 4px;
+            }
+            .signature .name {
+                font-size: 1.15rem;
+                letter-spacing: 1.5px;
+            }
+            .love-btn {
+                font-size: 0.9rem;
+                padding: 10px 18px;
+                letter-spacing: 1px;
+                margin: 0.6rem 0 0.4rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            body {
+                padding: 6px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .love-card {
+                padding: 1.4rem 0.8rem;
+                border-radius: 28px;
+            }
+            h1 {
+                font-size: 1.4rem;
+                letter-spacing: 0.5px;
+            }
+            .heart-beat {
+                font-size: 2.8rem;
+            }
+            .wife-name {
+                font-size: 0.8rem;
+                letter-spacing: 2.5px;
+            }
+            .nickname {
+                font-size: 0.8rem;
+                margin-bottom: 0.8rem;
+                letter-spacing: 1px;
+            }
+            .love-message {
+                font-size: 0.9rem;
+                line-height: 1.65;
+                margin: 0.7rem 0;
+            }
+            .babycoy-message {
+                font-size: 0.85rem;
+                line-height: 1.55;
+                padding: 0.75rem 0.55rem;
+                border-radius: 24px;
+                margin: 0.9rem 0 0.5rem;
+            }
+            .tiny-hearts {
+                gap: 10px;
+                font-size: 1.3rem;
+                margin: 0.7rem 0 0.4rem;
+            }
+            .tiny-hearts span:nth-child(2) {
+                font-size: 1.6rem;
+            }
+            .signature {
+                margin-top: 1.1rem;
+                padding-top: 0.9rem;
+                font-size: 0.9rem;
+                gap: 3px;
+            }
+            .signature .name {
+                font-size: 1.05rem;
+                letter-spacing: 1px;
+            }
+            .love-btn {
+                font-size: 0.85rem;
+                padding: 10px 16px;
+                letter-spacing: 0.8px;
+            }
+        }
+
+        @media (max-height: 600px) and (orientation: landscape) {
+            body {
+                align-items: flex-start;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+            .love-card {
+                padding: 1.5rem 1.5rem;
+                border-radius: 35px;
+            }
+            .heart-beat {
+                font-size: 2.8rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .love-message {
+                margin: 0.6rem 0;
+                font-size: 0.95rem;
+            }
+            .babycoy-message {
+                margin: 0.8rem 0 0.5rem;
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+            .tiny-hearts {
+                margin: 0.6rem 0 0.3rem;
+                font-size: 1.4rem;
+            }
+            .signature {
+                margin-top: 1rem;
+                padding-top: 0.8rem;
+            }
+            .love-btn {
+                margin: 0.4rem 0 0.3rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- background floating hearts ❤️ -->
+    <div class="background-love" id="backgroundLove"></div>
+
+    <!-- main surprise card -->
+    <main class="love-card">
+        <div class="heart-beat">❤️</div>
+
+        <h1>To My Dearest Joy</h1>
+        <div class="wife-name">✨ MY WIFE ✨</div>
+        <div class="nickname">“Mamalot” 💕</div>
+
+        <div class="message-wrapper">
+            <p class="love-message" id="loveMessage">
+                You are the poetry in my heart,<br>
+                the warmth in my soul,<br>
+                and the reason I believe in forever.
+            </p>
+        </div>
+
+        <!-- Special message for Babycoy, our daughter -->
+        <div class="babycoy-message">
+            👶🏻💗 And to our precious <span>Babycoy</span> —<br>
+            You are the beautiful blend of our love.<br>
+            Papaced and Mamalot love you endlessly! 🌟
+        </div>
+
+        <div class="tiny-hearts">
+            <span>❤️</span>
+            <span>💖</span>
+            <span>❤️</span>
+        </div>
+
+        <!-- interactive button - adds extra love -->
+        <button class="love-btn" id="loveBtn">💌 Click for more love 💌</button>
+
+        <div class="signature">
+            <span>With all my love,</span>
+            <span class="name" id="signatureName">Papaced</span>
+            <span style="font-size: 1.4rem; margin-top: 5px;">💍 ∞</span>
+            <span style="font-size: 1rem; color: #ffb3c6; margin-top: 4px;">— always your Papaced —</span>
+        </div>
+    </main>
+
+    <script>
+        (function() {
+            // ---------- 1. FLOATING BACKGROUND HEARTS ----------
+            const backgroundContainer = document.getElementById('backgroundLove');
+            const heartSymbols = ['❤️', '💖', '💗', '💓', '💕', '💘', '💝', '🌸', '✨', '💞', '👶', '🍼'];
+            const HEART_COUNT = 45;
+
+            for (let i = 0; i < HEART_COUNT; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('floating-heart');
+                const symbolList = ['❤️', '💖', '💗', '💓', '💕', '💘', '💝', '🌸', '✨', '💞'];
+                const randomVal = Math.random();
+                let symbol;
+                if (randomVal < 0.1) {
+                    symbol = '👶';
+                } else if (randomVal < 0.18) {
+                    symbol = '🍼';
+                } else if (randomVal < 0.26) {
+                    symbol = '🧸';
+                } else {
+                    symbol = symbolList[Math.floor(Math.random() * symbolList.length)];
+                }
+                heart.textContent = symbol;
+
+                const left = Math.random() * 100;
+                const size = 16 + Math.random() * 40;
+                const duration = 8 + Math.random() * 18;
+                const delay = Math.random() * -20;
+                const opacity = 0.15 + Math.random() * 0.45;
+
+                heart.style.left = left + '%';
+                heart.style.fontSize = size + 'px';
+                heart.style.animationDuration = duration + 's';
+                heart.style.animationDelay = delay + 's';
+                heart.style.opacity = opacity;
+
+                backgroundContainer.appendChild(heart);
+            }
+
+            // ---------- 2. PERSONALIZED MESSAGES & INTERACTION ----------
+            const loveBtn = document.getElementById('loveBtn');
+            const loveMessageEl = document.getElementById('loveMessage');
+
+            const sweetMessages = [
+                `You are my today and all of my tomorrows, Joy.<br> I love you more than words can say.`,
+                `Every moment with you, my Mamalot, is a treasure.<br> You make my heart smile.`,
+                `I fall in love with you more every single day.<br> Forever isn't long enough with you, Joy.`,
+                `You're my best friend, my soulmate, my Mamalot.<br> I adore you endlessly.`,
+                `Thank you for being you, Joy.<br> I love you and our Babycoy with all my heart.`,
+                `My heart beats only for you, Mamalot.<br> You are my greatest blessing.`,
+                `I cherish every laugh, every hug, every kiss.<br> You and Babycoy are my world.`,
+                `Papaced loves you more than anything, Joy.<br> You're my everything.`,
+                `From Papaced to Mamalot: You are my forever.<br> And Babycoy is our little miracle.`,
+                `I love you, Joy. I love our daughter Babycoy.<br> Our family is my greatest joy.`,
+            ];
+            let messageIndex = 0;
+
+            // Heart burst effect
+            function createHeartBurst() {
+                for (let i = 0; i < 20; i++) {
+                    const burstHeart = document.createElement('div');
+                    const burstSymbols = ['❤️', '💖', '💗', '💓', '💕', '👶', '🍼', '🧸'];
+                    burstHeart.textContent = burstSymbols[Math.floor(Math.random() * burstSymbols.length)];
+                    burstHeart.style.position = 'fixed';
+                    burstHeart.style.left = (50 + (Math.random() * 30 - 15)) + '%';
+                    burstHeart.style.top = (40 + (Math.random() * 20 - 10)) + '%';
+                    burstHeart.style.fontSize = (20 + Math.random() * 35) + 'px';
+                    burstHeart.style.pointerEvents = 'none';
+                    burstHeart.style.zIndex = '999';
+                    burstHeart.style.opacity = '0.9';
+                    burstHeart.style.transition = 'all 1.2s cubic-bezier(0.2, 0.9, 0.4, 1)';
+                    burstHeart.style.filter = 'drop-shadow(0 0 15px #ff4d6d)';
+                    
+                    document.body.appendChild(burstHeart);
+
+                    requestAnimationFrame(() => {
+                        burstHeart.style.transform = `translate(${(Math.random() - 0.5) * 300}px, ${(Math.random() - 0.5) * 300 - 80}px) scale(0.2) rotate(${Math.random() * 360}deg)`;
+                        burstHeart.style.opacity = '0';
+                    });
+
+                    setTimeout(() => {
+                        if (burstHeart.parentNode) burstHeart.remove();
+                    }, 1300);
+                }
+            }
+
+            // Button event
+            loveBtn.addEventListener('click', () => {
+                messageIndex = (messageIndex + 1) % sweetMessages.length;
+                loveMessageEl.innerHTML = sweetMessages[messageIndex];
+                createHeartBurst();
+
+                const card = document.querySelector('.love-card');
+                card.style.transform = 'scale(1.01)';
+                setTimeout(() => {
+                    card.style.transform = 'scale(1)';
+                }, 200);
+
+                loveBtn.textContent = '💖 I love you Joy & Babycoy 💖';
+                setTimeout(() => {
+                    loveBtn.textContent = '💌 Click for more love 💌';
+                }, 2000);
+            });
+
+            console.log('❤️ Surprise loaded with love for Joy (Mamalot), Papaced, and Babycoy ❤️');
+        })();
+    </script>
+
+    <noscript>
+        <div style="color:white; text-align:center; padding:20px;">I love you Joy and Babycoy! ❤️ (Enable JavaScript for extra magic)</div>
+    </noscript>
+</body>
+</html>
